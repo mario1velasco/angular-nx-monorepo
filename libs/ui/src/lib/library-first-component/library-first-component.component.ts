@@ -5,12 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './library-first-component.component.html',
   styleUrls: ['./library-first-component.component.scss'],
 })
-export class LibraryFirstComponentComponent implements OnInit {
+export class LibraryFirstComponentComponent {
   constructor() {
-    console.log('constructor');
-  }
-
-  ngOnInit(): void {
-    console.log('OnInit');
+    // console.log('constructor');
   }
 }

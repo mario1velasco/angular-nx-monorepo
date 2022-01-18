@@ -123,6 +123,32 @@
       "tags": [],
       "implicitDependencies": ["angularnx"]
     },
+    "icons": {
+      "projectType": "library",
+      "root": "libs/icons",
+      "sourceRoot": "libs/icons/src",
+      "prefix": "bizawaynx",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/icons"],
+          "options": {
+            "jestConfig": "libs/icons/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/icons/src/**/*.ts",
+              "libs/icons/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "ui": {
       "projectType": "library",
       "root": "libs/ui",

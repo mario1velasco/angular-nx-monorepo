@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { IconEnum } from '../../../../libs/icons/src/enums/icon.enum';
+import { IconType } from '../../../../libs/icons/src/types/icon.type';
 
 /* eslint-disable */
 
@@ -436,7 +438,6 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
             Welcome angularnx 👋
           </h1>
         </div>
-        <bizawaynx-library-first-component></bizawaynx-library-first-component>
 
         <!--  HERO  -->
         <div id="hero" class="rounded">
@@ -844,7 +845,10 @@ nx affected:e2e</pre>
   encapsulation: ViewEncapsulation.None,
 })
 export class NxWelcomeComponent implements OnInit {
-  constructor() {}
+  type: IconType;
+  constructor() {
+    this.type = IconEnum.ADD;
+  }
 
   ngOnInit(): void {}
 }

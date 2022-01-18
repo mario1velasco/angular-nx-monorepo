@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@bizawaynx/icons": ["libs/icons/src/index.ts"],
       "@bizawaynx/ui": ["libs/ui/src/index.ts"]
     }
   },
