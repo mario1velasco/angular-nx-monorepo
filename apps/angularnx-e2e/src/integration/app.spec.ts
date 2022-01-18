@@ -1,4 +1,4 @@
-import { getGreeting } from '../support/app.po';
+import { getGreeting, getTitles } from '../support/app.po';
 
 describe('angularnx', () => {
   beforeEach(() => cy.visit('/'));
@@ -9,5 +9,11 @@ describe('angularnx', () => {
 
     // Function helper example, see `../support/app.po.ts` file
     getGreeting().contains('Welcome angularnx');
+  });
+
+  it('should display titles', () => {
+    getTitles().should((t) => expect(t.length).equal(3));
+    // getAddTodoButton().click();
+    getTitles().contains('YouTube');
   });
 });
