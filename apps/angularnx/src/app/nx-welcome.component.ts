@@ -436,6 +436,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
             Welcome angularnx 👋
           </h1>
         </div>
+        <bizawaynx-library-first-component></bizawaynx-library-first-component>
 
         <!--  HERO  -->
         <div id="hero" class="rounded">
