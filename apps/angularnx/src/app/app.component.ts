@@ -10,7 +10,13 @@ import { IconType } from '../../../../libs/icons/src/types/icon.type';
 export class AppComponent {
   type: IconType;
   title = 'angularnx';
+  isClicked = false;
   constructor() {
     this.type = IconEnum.ADD;
+  }
+
+  clickBtn() {
+    console.log('hola');
+    this.isClicked = true;
   }
 }

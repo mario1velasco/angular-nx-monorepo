@@ -8,5 +8,7 @@
   "video": true,
   "videosFolder": "../../dist/cypress/apps/angularnx-e2e/videos",
   "screenshotsFolder": "../../dist/cypress/apps/angularnx-e2e/screenshots",
-  "chromeWebSecurity": false
+  "chromeWebSecurity": false,
+  "projectId": "g69k7q",
+  "experimentalStudio": true
 }
