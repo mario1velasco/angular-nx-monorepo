@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IconEnum } from '../../../../libs/icons/src/enums/icon.enum';
-import { IconType } from '../../../../libs/icons/src/types/icon.type';
+import { IconEnum } from '../../../../libs/icons/src/lib/data/enums/icon.enum';
+import { IconType } from '../../../../libs/icons/src/lib/data/types/icon.type';
+import { IconsModule } from '@bizawaynx/icons';
 
 @Component({
   selector: 'bizawaynx-root',

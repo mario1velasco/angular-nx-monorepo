@@ -18,12 +18,12 @@
           }
         ],
         "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "prefix": "bizawaynx",
-            "style": "kebab-case"
-          }
+          "error"
+          // {
+          //   "type": "element",
+          //   "prefix": "bizawaynx",
+          //   "style": "kebab-case"
+          // }
         ]
       }
     },

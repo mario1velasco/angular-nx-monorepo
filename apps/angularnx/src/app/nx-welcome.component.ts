@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { IconEnum } from '../../../../libs/icons/src/enums/icon.enum';
-import { IconType } from '../../../../libs/icons/src/types/icon.type';
+import { IconEnum } from '../../../../libs/icons/src/lib/data/enums/icon.enum';
+import { IconType } from '../../../../libs/icons/src/lib/data/types/icon.type';
 
 /* eslint-disable */
 

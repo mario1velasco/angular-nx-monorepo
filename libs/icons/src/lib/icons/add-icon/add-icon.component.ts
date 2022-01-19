@@ -7,8 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class AddIconComponent {
   @Input()
-  viewBox = '0 0 20 20';
-  svgClass = 'stroke-current';
+  viewBox = '0 0 24 24';
+  @Input()
+  svgClass = 'h-6 w-6';
 
   constructor() {
     // this.viewBox = '0 0 20 20';
