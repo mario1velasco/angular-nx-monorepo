@@ -12,6 +12,12 @@ export class IconComponent implements OnInit {
   //   console.log(value);
   // }
   @Input()
+  viewBox = '0 0 24 24';
+  @Input()
+  isFill = false;
+  @Input()
+  svgClass = 'h-6 w-6';
+  @Input()
   type: string = IconEnum.ADD as IconType;
 
   constructor() {

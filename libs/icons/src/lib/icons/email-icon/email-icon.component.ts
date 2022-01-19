@@ -10,6 +10,8 @@ export class EmailIconComponent implements OnInit {
   viewBox = '0 0 24 24';
   @Input()
   svgClass = 'h-6 w-6';
+  @Input()
+  isFill = false;
 
   constructor() {
     console.log();

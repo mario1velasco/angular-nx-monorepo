@@ -19,7 +19,7 @@
       <div
         class="absolute text-white flex items-center px-4 border-r h-full bg-indigo-700 rounded-l cursor-pointer"
       >
-        <Icon type="email"></Icon>
+        <Icon type="email" svgClass="h-2 w-2"></Icon>
       </div>
       <input
         id="email3"
@@ -32,11 +32,12 @@
 </div>
 <!-- ! HERE ICON -->
 <!-- ! USE ENUM IN VIEW -->
-<div class="flex md:py-0 py-4 mt-10 w-6 h-6">
+<div class="flex md:py-0 py-4 mt-10">
   <Icon type="{{ type }}"></Icon>
-  <Icon type="bell"></Icon>
-  <Icon type="email"></Icon>
+  <Icon type="bell" [isFill]="true"></Icon>
+  <Icon type="bell" [isFill]="false"></Icon>
 </div>
+<Icon type="email" svgClass="h-10 w-10"></Icon>
 <!-- <div>
 </div> -->
 <!-- ! HERE ICON -->
@@ -65,13 +66,13 @@
       <div class="lg:w-8/12 mt-6 md:mt-8 lg:mt-0">
         <div class="relative w-full h-full">
           <img
-            src="https://i.ibb.co/gmV2mLr/pexels-maksim-goncharenok-4352247-1-1-1.png"
+            src="../assets/img-house.png"
             alt="A lounge sofa"
             role="img"
             class="w-full h-full relative hidden lg:block"
           />
           <img
-            src="https://i.ibb.co/Mhgkt2f/pexels-maksim-goncharenok-4352247-1-1-1.png"
+            src="../assets/img0.png"
             alt="A lounge sofa"
             role="img"
             class="w-full h-full lg:hidden"

@@ -10,6 +10,7 @@ export class BellIconComponent implements OnInit {
   viewBox = '0 0 24 24';
   @Input()
   svgClass = 'h-6 w-6';
+  @Input()
   isFill = false;
   constructor() {
     // sda

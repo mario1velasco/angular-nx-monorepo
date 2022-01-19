@@ -7,7 +7,12 @@ import { EmailIconComponent } from './icons/email-icon/email-icon.component';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [IconComponent, AddIconComponent, BellIconComponent, EmailIconComponent],
+  declarations: [
+    IconComponent,
+    AddIconComponent,
+    BellIconComponent,
+    EmailIconComponent,
+  ],
   exports: [IconComponent],
 })
 export class IconsModule {}

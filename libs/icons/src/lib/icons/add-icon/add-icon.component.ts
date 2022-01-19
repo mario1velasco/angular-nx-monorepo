@@ -10,6 +10,8 @@ export class AddIconComponent {
   viewBox = '0 0 24 24';
   @Input()
   svgClass = 'h-6 w-6';
+  @Input()
+  isFill = false;
 
   constructor() {
     // this.viewBox = '0 0 20 20';

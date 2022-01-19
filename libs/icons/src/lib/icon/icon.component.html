@@ -1,9 +1,21 @@
 <div *ngIf="type === 'add'">
-  <bizawaynx-add-icon></bizawaynx-add-icon>
+  <bizawaynx-add-icon
+    svgClass="{{ svgClass }}"
+    viewBox="{{ viewBox }}"
+    [isFill]="isFill"
+  ></bizawaynx-add-icon>
 </div>
 <div *ngIf="type === 'bell'">
-  <bizawaynx-bell-icon></bizawaynx-bell-icon>
+  <bizawaynx-bell-icon
+    svgClass="{{ svgClass }}"
+    viewBox="{{ viewBox }}"
+    [isFill]="isFill"
+  ></bizawaynx-bell-icon>
 </div>
 <div *ngIf="type === 'email'">
-  <bizawaynx-email-icon></bizawaynx-email-icon>
+  <bizawaynx-email-icon
+    svgClass="{{ svgClass }}"
+    viewBox="{{ viewBox }}"
+    [isFill]="isFill"
+  ></bizawaynx-email-icon>
 </div>

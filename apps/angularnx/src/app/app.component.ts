@@ -18,6 +18,6 @@ export class AppComponent {
 
   clickBtn() {
     console.log('hola');
-    this.isClicked = true;
+    this.isClicked = !this.isClicked;
   }
 }
