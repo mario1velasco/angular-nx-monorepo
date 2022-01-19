@@ -13,16 +13,16 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "bizawaynx",
+            "prefix": "",
             "style": "camelCase"
           }
         ],
         "@angular-eslint/component-selector": [
           "error",
           {
-            "type": "element",
-            "prefix": "bizawaynx",
-            "style": "kebab-case"
+            "type": "element"
+            // "prefix": "bizawaynx",
+            // "style": "kebab-case"
           }
         ]
       }

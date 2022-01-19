@@ -1,0 +1,12 @@
+.btn {
+  @apply mx-2 my-2 bg-gray-100 transition duration-150 ease-in-out hover:bg-gray-200 rounded border border-gray-300 text-gray-600 px-8 py-3 text-sm;
+}
+.btn-primary {
+  @apply mx-2 my-2 bg-white transition duration-150 ease-in-out hover:border-indigo-600 hover:text-indigo-600 rounded border border-indigo-700 text-indigo-700 px-8 py-3 text-sm;
+}
+.btn-secondary {
+  @apply mx-2 my-2 bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-8 py-3 text-sm;
+}
+.btn-disabled {
+  @apply mx-2 my-2 bg-gray-300 transition duration-150 ease-in-out rounded text-indigo-700 px-8 py-3 text-sm cursor-not-allowed;
+}
