@@ -93,8 +93,7 @@
           }
         }
       },
-      "tags": [],
-      "implicitDependencies": ["icons", "ui"]
+      "tags": []
     },
     "angularnx-e2e": {
       "root": "apps/angularnx-e2e",
@@ -121,8 +120,7 @@
           }
         }
       },
-      "tags": [],
-      "implicitDependencies": ["angularnx"]
+      "tags": []
     },
     "shared-icons": {
       "projectType": "library",
@@ -170,6 +168,32 @@
             "lintFilePatterns": [
               "libs/shared/ui/src/**/*.ts",
               "libs/shared/ui/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "shared-util": {
+      "projectType": "library",
+      "root": "libs/shared/util",
+      "sourceRoot": "libs/shared/util/src",
+      "prefix": "bizawaynx",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/util"],
+          "options": {
+            "jestConfig": "libs/shared/util/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/util/src/**/*.ts",
+              "libs/shared/util/src/**/*.html"
             ]
           }
         }

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { IconEnum } from '../data/enums/icon.enum';
-import { IconType } from '../data/types/icon.type';
+import { IconEnum } from '@bizawaynx/shared/util';
+import { IconType } from '@bizawaynx/shared/util';
 
 @Component({
   selector: 'Icon',
