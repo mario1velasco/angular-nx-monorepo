@@ -93,7 +93,8 @@
           }
         }
       },
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["icons", "ui"]
     },
     "angularnx-e2e": {
       "root": "apps/angularnx-e2e",
@@ -123,17 +124,17 @@
       "tags": [],
       "implicitDependencies": ["angularnx"]
     },
-    "icons": {
+    "shared-icons": {
       "projectType": "library",
-      "root": "libs/icons",
-      "sourceRoot": "libs/icons/src",
+      "root": "libs/shared/icons",
+      "sourceRoot": "libs/shared/icons/src",
       "prefix": "bizawaynx",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/icons"],
+          "outputs": ["coverage/libs/shared/icons"],
           "options": {
-            "jestConfig": "libs/icons/jest.config.js",
+            "jestConfig": "libs/shared/icons/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -141,32 +142,35 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/icons/src/**/*.ts",
-              "libs/icons/src/**/*.html"
+              "libs/shared/icons/src/**/*.ts",
+              "libs/shared/icons/src/**/*.html"
             ]
           }
         }
       },
       "tags": []
     },
-    "ui": {
+    "shared-ui": {
       "projectType": "library",
-      "root": "libs/ui",
-      "sourceRoot": "libs/ui/src",
+      "root": "libs/shared/ui",
+      "sourceRoot": "libs/shared/ui/src",
       "prefix": "bizawaynx",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/ui"],
+          "outputs": ["coverage/libs/shared/ui"],
           "options": {
-            "jestConfig": "libs/ui/jest.config.js",
+            "jestConfig": "libs/shared/ui/jest.config.js",
             "passWithNoTests": true
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/ui/src/**/*.ts", "libs/ui/src/**/*.html"]
+            "lintFilePatterns": [
+              "libs/shared/ui/src/**/*.ts",
+              "libs/shared/ui/src/**/*.html"
+            ]
           }
         }
       },
