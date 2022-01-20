@@ -1,36 +1,32 @@
 <!-- <bizawaynx-library-first-component></bizawaynx-library-first-component> -->
 <!-- <bizawaynx-nx-welcome></bizawaynx-nx-welcome> -->
 <div class="mx-2 my-2 px-6 flex flex-wrap">
-  <Button className="btn my-button" (click)="clickBtn()"></Button>
-  <Button className="btn-primary"></Button>
-  <Button className="btn-secondary"></Button>
-  <Button [disabled]="true"></Button>
+  <Button className="btn my-button" (click)="clickBtn()" [disabled]="isClicked"
+    >Default</Button
+  >
+  <Button className="btn-primary">Primary</Button>
+  <Button className="btn-secondary">Secondary</Button>
+  <Button [disabled]="true">Disabled</Button>
 </div>
 <div *ngIf="isClicked">
-  <h2>Hola hola caracola</h2>
-  <!-- Code block starts -->
-  <div class="flex flex-col md:py-0 py-4 mt-10">
-    <label
-      for="email3"
-      class="text-gray-800 text-sm font-bold leading-tight tracking-normal mb-2"
-      >Email</label
-    >
-    <div class="relative">
-      <div
-        class="absolute text-white flex items-center px-4 border-r h-full bg-indigo-700 rounded-l cursor-pointer"
-      >
-        <Icon type="email" svgClass="h-2 w-2"></Icon>
-      </div>
-      <input
-        id="email3"
-        class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 bg-white font-normal w-64 h-10 flex items-center pl-16 text-sm border-gray-300 rounded border shadow"
-        placeholder="Placeholder"
-      />
-    </div>
+  <h2>Bundi Bundi</h2>
+  <Input-email
+    placeholder="Custom placeholder"
+    labelText="My label text"
+    [(value)]="emailValue"
+  ></Input-email>
+  <div *ngIf="emailValue">
+    <h4>{{ emailValue }}</h4>
+    <Button className="btn my-button" (click)="clickBtn()">Click me!</Button>
   </div>
-  <!-- Code block ends -->
 </div>
-<!-- ! HERE ICON -->
+
+<!-- ! INI CONTAINER ICON -->
+<Container className="">
+  <h2>HOLA</h2>
+</Container>
+<!-- ! END CONTAINER ICON -->
+<!-- ! INI HERE ICON -->
 <!-- ! USE ENUM IN VIEW -->
 <div class="flex md:py-0 py-4 mt-10">
   <Icon type="{{ type }}"></Icon>
@@ -40,8 +36,8 @@
 <Icon type="email" svgClass="h-10 w-10"></Icon>
 <!-- <div>
 </div> -->
-<!-- ! HERE ICON -->
-<!-- ! HERE HERO -->
+<!-- ! END HERE ICON -->
+<!-- ! INI HERE HERO -->
 <input type="text" name="prueba" id="prueba" />
 <div class="dark:bg-gray-900">
   <div class="container mx-auto py-9 md:py-12 lg:py-24">

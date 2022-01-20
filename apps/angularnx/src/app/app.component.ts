@@ -12,12 +12,12 @@ export class AppComponent {
   type: IconType;
   title = 'angularnx';
   isClicked = false;
+  emailValue: string | undefined;
   constructor() {
     this.type = IconEnum.ADD;
   }
 
   clickBtn() {
-    console.log('hola');
     this.isClicked = !this.isClicked;
   }
 }

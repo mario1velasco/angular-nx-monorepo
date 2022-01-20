@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IconEnum } from '../data/enums/icon.enum';
 import { IconType } from '../data/types/icon.type';
 
@@ -7,7 +7,7 @@ import { IconType } from '../data/types/icon.type';
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss'],
 })
-export class IconComponent implements OnInit {
+export class IconComponent {
   // @Input() public set type(value: IconType) {
   //   console.log(value);
   // }
@@ -22,9 +22,5 @@ export class IconComponent implements OnInit {
 
   constructor() {
     // this.type = IconEnum.ADD as IconType;
-  }
-
-  ngOnInit(): void {
-    console.log(this.type);
   }
 }

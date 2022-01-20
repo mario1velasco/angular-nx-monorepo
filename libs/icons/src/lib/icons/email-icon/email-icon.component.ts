@@ -1,11 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'bizawaynx-email-icon',
   templateUrl: './email-icon.component.html',
   styleUrls: ['./email-icon.component.scss'],
 })
-export class EmailIconComponent implements OnInit {
+export class EmailIconComponent {
   @Input()
   viewBox = '0 0 24 24';
   @Input()
@@ -14,10 +14,6 @@ export class EmailIconComponent implements OnInit {
   isFill = false;
 
   constructor() {
-    console.log();
-  }
-
-  ngOnInit(): void {
-    console.log();
+    // console.log();
   }
 }
