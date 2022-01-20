@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Required } from '../../../decorators/required.decorator';
+import { Required } from '@bizawaynx/shared/util';
 
 @Component({
   selector: 'Input-email',

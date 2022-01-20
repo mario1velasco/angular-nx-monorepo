@@ -1,5 +1,5 @@
-<Container className="grid grid-cols-1">
-  <div>
+<Container className="grid grid-cols-1 mx-10">
+  <Container>
     <Button
       className="btn my-button"
       (click)="clickBtn()"
@@ -9,7 +9,8 @@
     <Button className="btn-primary">Primary</Button>
     <Button className="btn-secondary">Secondary</Button>
     <Button [disabled]="true">Disabled</Button>
-  </div>
+    <Button className="btn-error">Error</Button>
+  </Container>
   <div *ngIf="isClicked">
     <h2 class="ml-2">Bundi Bundi</h2>
     <Input-email
@@ -35,10 +36,10 @@
   <!-- ! END CONTAINER ICON -->
   <!-- ! INI HERE ICON -->
   <!-- ! USE ENUM IN VIEW -->
-  <Container className="flex">
-    <Icon type="{{ type }}"></Icon>
+  <Container className="">
+    <!-- <Icon type="{{ type }}"></Icon> -->
     <Icon type="bell" [isFill]="true"></Icon>
-    <Icon type="bell" [isFill]="false"></Icon>
+    <Icon type="bell"></Icon>
   </Container>
   <Container className="flex">
     <Icon type="email" svgClass="h-10 w-10"></Icon>

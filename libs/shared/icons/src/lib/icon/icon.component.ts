@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IconEnum } from '@bizawaynx/shared/util';
-import { IconType } from '@bizawaynx/shared/util';
+import { IconEnum, IconType, Required } from '@bizawaynx/shared/util';
 
 @Component({
   selector: 'Icon',
@@ -18,7 +17,8 @@ export class IconComponent {
   @Input()
   svgClass = 'h-6 w-6';
   @Input()
-  type: string = IconEnum.ADD as IconType;
+  @Required
+  type: string | undefined;
 
   constructor() {
     // this.type = IconEnum.ADD as IconType;

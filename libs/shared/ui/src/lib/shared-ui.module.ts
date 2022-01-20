@@ -6,9 +6,16 @@ import { InputEmailComponent } from './components/form/input-email/input-email.c
 import { SharedIconsModule } from '@bizawaynx/shared/icons';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { SharedUtilModule } from '../../../util/src';
 
 @NgModule({
-  imports: [CommonModule, SharedIconsModule, FormsModule, BrowserModule],
+  imports: [
+    CommonModule,
+    SharedIconsModule,
+    FormsModule,
+    BrowserModule,
+    SharedUtilModule,
+  ],
   declarations: [ButtonComponent, ContainerComponent, InputEmailComponent],
   exports: [ButtonComponent, ContainerComponent, InputEmailComponent],
 })
