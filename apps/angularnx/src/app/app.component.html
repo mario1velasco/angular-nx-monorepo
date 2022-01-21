@@ -11,6 +11,7 @@
     <Button [disabled]="true">Disabled</Button>
     <Button className="btn-error">Error</Button>
   </Container>
+
   <div *ngIf="isClicked">
     <h2 class="ml-2">Bundi Bundi</h2>
     <Input-email
@@ -23,12 +24,7 @@
       <Button className="btn my-button" (click)="clickBtn()">Click me!</Button>
     </div>
   </div>
-  <Input-email
-    placeholder="Custom placeholder"
-    labelText="My label text"
-    [(value)]="emailValue"
-  ></Input-email>
-
+  <Divider></Divider>
   <!-- ! INI CONTAINER ICON -->
   <Container className="">
     <h2>HOLA</h2>
@@ -36,11 +32,26 @@
   <!-- ! END CONTAINER ICON -->
   <!-- ! INI HERE ICON -->
   <!-- ! USE ENUM IN VIEW -->
+  <Divider></Divider>
+  <div class="relative text-gray-700">
+    <input
+      class="w-full h-10 pl-8 pr-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"
+      type="text"
+      placeholder="https://tailwind-starter-kit.vercel.app/docs/forms"
+    />
+    <div
+      class="absolute inset-y-0 left-0 flex items-center px-2 pointer-events-none"
+    >
+      <Icon type="email" svgClass="h-4 w-4"></Icon>
+    </div>
+  </div>
+  <Divider></Divider>
   <Container className="">
     <Icon type="{{ type }}"></Icon>
     <Icon type="bell" [isFill]="true"></Icon>
     <Icon type="bell"></Icon>
   </Container>
+  <Divider></Divider>
   <Container className="flex">
     <Icon type="email" svgClass="h-10 w-10"></Icon>
     <Icon type="email" svgClass="h-12 w-12" [isFill]="true"></Icon>
