@@ -17,10 +17,10 @@ describe('IconComponent', () => {
     fixture = TestBed.createComponent(IconComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    component.type = IconEnum.ADD;
   });
 
   it('should create', () => {
-    component.type = IconEnum.ADD;
     expect(component).toBeTruthy();
   });
 });
