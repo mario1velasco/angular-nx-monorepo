@@ -19,3 +19,18 @@
 .divider::before {
   @apply absolute w-full h-[3px] left-0 top-1/2 content-[''] bg-gradient-to-r from-transparent via-black to-transparent;
 }
+.badge {
+  @apply inline-flex items-center bg-gray-100 justify-center px-2 py-1 mr-2 text-xs font-bold leading-none border border-gray-300 text-gray-600 rounded-full;
+}
+.badge-primary {
+  @apply inline-flex items-center bg-white justify-center px-2 py-1 mr-2 text-xs font-bold leading-none border border-indigo-700 text-indigo-700 rounded-full;
+}
+.badge-secondary {
+  @apply inline-flex items-center bg-indigo-500 justify-center px-2 py-1 mr-2 text-xs font-bold leading-none text-white rounded-full;
+}
+.badge-disabled {
+  @apply inline-flex items-center bg-gray-300 justify-center px-2 py-1 mr-2 text-xs font-bold leading-none text-indigo-700 rounded-full cursor-not-allowed;
+}
+.badge-error {
+  @apply inline-flex items-center bg-red-500 justify-center px-2 py-1 mr-2 text-xs font-bold leading-none text-white rounded-full;
+}

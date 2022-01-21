@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Required } from '@bizawaynx/shared/util';
+import { IconEnum } from '@bizawaynx/shared/util';
 
 @Component({
   selector: 'Input-email',
@@ -16,12 +16,13 @@ export class InputEmailComponent {
   @Input()
   containerClass: string | undefined;
   @Input()
-  @Required
   value: string | undefined;
   @Output() valueChange = new EventEmitter<string>();
   // <document-content [(view)]="view" ></document-content>
   // Is syntactic sugar for this:
   // <document-content [view]="view" (viewChange)="view=$event" ></document-content>
+
+  iconEnum = IconEnum;
 
   constructor() {
     console.log();

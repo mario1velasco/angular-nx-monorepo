@@ -4,7 +4,7 @@ import { IconComponent } from './icon/icon.component';
 import { AddIconComponent } from './icons/add-icon/add-icon.component';
 import { BellIconComponent } from './icons/bell-icon/bell-icon.component';
 import { EmailIconComponent } from './icons/email-icon/email-icon.component';
-import { SharedUtilModule } from '../../../util/src';
+import { SharedUtilModule } from '@bizawaynx/shared/util';
 
 @NgModule({
   imports: [CommonModule, SharedUtilModule],

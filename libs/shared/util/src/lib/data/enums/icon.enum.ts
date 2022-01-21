@@ -1,4 +1,4 @@
-export const enum IconEnum {
+export enum IconEnum {
   HEARTH = 'hearth',
   BELL = 'bell',
   FOLDER = 'folder',
@@ -14,6 +14,7 @@ export const enum IconEnum {
   FACEBOOK = 'facebook',
   YOUTUBE = 'youtube',
   EDIT = 'edit',
+  EMAIL = 'email',
   MENU = 'menu',
   ADD = 'add',
   DELETE = 'delete',

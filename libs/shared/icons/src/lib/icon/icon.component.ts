@@ -1,15 +1,13 @@
-import { Component, Input } from '@angular/core';
-import { IconEnum, IconType, Required } from '@bizawaynx/shared/util';
+import { Component, Input, OnInit } from '@angular/core';
+import { IconEnum, EnumUtils } from '@bizawaynx/shared/util';
 
 @Component({
-  selector: 'Icon',
+  // ! type is required
+  selector: 'Icon[type]',
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss'],
 })
-export class IconComponent {
-  // @Input() public set type(value: IconType) {
-  //   console.log(value);
-  // }
+export class IconComponent implements OnInit {
   @Input()
   viewBox = '0 0 24 24';
   @Input()
@@ -17,10 +15,15 @@ export class IconComponent {
   @Input()
   svgClass = 'h-6 w-6';
   @Input()
-  @Required
   type: string | undefined;
+
+  iconEnum = IconEnum;
 
   constructor() {
     // this.type = IconEnum.ADD as IconType;
+  }
+
+  ngOnInit(): void {
+    EnumUtils.existsOnEnum(this.type, this.iconEnum, this.constructor.name);
   }
 }

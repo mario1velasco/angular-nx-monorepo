@@ -1,18 +1,18 @@
-<div *ngIf="type === 'add'">
+<div *ngIf="type === iconEnum.ADD">
   <bizawaynx-add-icon
     svgClass="{{ svgClass }}"
     viewBox="{{ viewBox }}"
     [isFill]="isFill"
   ></bizawaynx-add-icon>
 </div>
-<div *ngIf="type === 'bell'">
+<div *ngIf="type === iconEnum.BELL">
   <bizawaynx-bell-icon
     svgClass="{{ svgClass }}"
     viewBox="{{ viewBox }}"
     [isFill]="isFill"
   ></bizawaynx-bell-icon>
 </div>
-<div *ngIf="type === 'email'">
+<div *ngIf="type === iconEnum.EMAIL">
   <bizawaynx-email-icon
     svgClass="{{ svgClass }}"
     viewBox="{{ viewBox }}"

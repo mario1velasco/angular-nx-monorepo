@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'angularnx';
   isClicked = false;
   emailValue: string | undefined;
+  iconEnum = IconEnum;
   constructor() {
     this.type = IconEnum.ADD;
   }
