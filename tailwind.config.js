@@ -2,8 +2,9 @@ module.exports = {
   // mode: 'jit',
   content: [
     './apps/angularnx/src/**/*.{html,js}',
-    './libs/ui/src/**/*.{html,js}',
-    './libs/icons/src/**/*.{html,js}',
+    './libs/shared/ui/src/**/*.{html,js}',
+    './libs/shared/icons/src/**/*.{html,js}',
+    './libs/shared/util/src/**/*.{html,js}',
   ],
 
   // purge: {
