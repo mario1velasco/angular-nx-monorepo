@@ -13,3 +13,9 @@
 .btn-error {
   @apply mx-2 my-2 bg-red-500 transition duration-700 ease-in-out hover:bg-red-800 rounded text-white px-8 py-3 text-sm;
 }
+.divider {
+  @apply leading-[1em] relative outline-0 border-0 text-center h-[1.5em] opacity-50;
+}
+.divider::before {
+  @apply absolute w-full h-[3px] left-0 top-1/2 content-[''] bg-gradient-to-r from-transparent via-black to-transparent;
+}

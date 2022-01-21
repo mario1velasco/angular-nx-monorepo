@@ -1,3 +1,6 @@
+// ! https://www.cloudhadoop.com/angular-tailwind-tutorial/
+// ! Follow that tutorial and after add the content
+
 module.exports = {
   // mode: 'jit',
   content: [
