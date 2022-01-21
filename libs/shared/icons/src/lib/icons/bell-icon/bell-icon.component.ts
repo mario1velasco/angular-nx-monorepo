@@ -1,11 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'bizawaynx-bell-icon',
   templateUrl: './bell-icon.component.html',
   styleUrls: ['./bell-icon.component.scss'],
 })
-export class BellIconComponent {
+export class BellIconComponent implements OnInit {
   @Input()
   viewBox = '0 0 24 24';
   @Input()
@@ -14,5 +14,11 @@ export class BellIconComponent {
   isFill = false;
   constructor() {
     // sda
+  }
+
+  ngOnInit(): void {
+    console.log('viewBox => ', this.viewBox);
+    console.log('svgClass => ', this.svgClass);
+    console.log('isFill => ', this.isFill);
   }
 }

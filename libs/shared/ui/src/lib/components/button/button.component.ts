@@ -27,11 +27,9 @@ export class ButtonComponent implements OnInit, OnChanges {
       this.className = 'btn-disabled';
     }
     this.initialClassName = this.className;
-    console.log('this.className =>', this.className);
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes['disabled']?.currentValue);
     if (!changes['disabled']?.firstChange) {
       if (changes['disabled']?.currentValue) {
         this.className = 'btn-disabled';
