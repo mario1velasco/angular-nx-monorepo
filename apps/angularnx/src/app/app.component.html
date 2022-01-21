@@ -1,4 +1,5 @@
 <Container className="grid grid-cols-1 mx-10">
+  <h1 class="text-6xl">AWESOME NX</h1>
   <Container>
     <Button
       className="btn my-button"
@@ -12,19 +13,39 @@
     <Button className="btn-error">Error</Button>
   </Container>
 
-  <div *ngIf="isClicked">
-    <h2 class="ml-2">Bundi Bundi</h2>
-    <Input-email
-      placeholder="Custom placeholder"
-      labelText="My custom label text"
-      [(value)]="emailValue"
-    ></Input-email>
-    <div *ngIf="emailValue">
+  <div class="divider"></div>
+  <div *ngIf="isClicked" class="grid grid-cols-4 gap-4">
+    <Container className="col-start-2 col-span-3">
+      <h2 class="ml-2">Bundi Bundi</h2>
+      <Input-email
+        id="input-email-1"
+        placeholder="Custom placeholder"
+        labelText="My custom label text"
+        [(value)]="emailValue"
+      ></Input-email>
+    </Container>
+    <Container
+      className="{{
+        emailValue
+          ? 'col-start-3 col-span-4 transition-all duration-1000 ease-in-out opacity-100'
+          : 'col-start-3 col-span-4 transition-all duration-1000 ease-in-out opacity-0'
+      }}"
+    >
       <h4>emailValue => {{ emailValue }}</h4>
-      <Button className="btn my-button" (click)="clickBtn()">Click me!</Button>
-    </div>
+      <Button className="btn-secondary animate-pulse" (click)="clickBtn()"
+        >Click me!</Button
+      >
+    </Container>
   </div>
-  <Divider></Divider>
+  <div class="divider"></div>
+  <Input-email
+    id="input-email-1"
+    placeholder="Custom placeholder"
+    labelText="My label text"
+    [(value)]="emailValue"
+  ></Input-email>
+  <div class="divider"></div>
+
   <!-- ! INI CONTAINER ICON -->
   <Container className="">
     <h2>HOLA</h2>
@@ -35,28 +56,52 @@
   <Divider></Divider>
   <div class="relative text-gray-700">
     <input
-      class="w-full h-10 pl-8 pr-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"
+      class="w-full h-10 pl-8 pr-3 text-base placeholder-gray-300 border rounded-lg focus:shadow-outline"
       type="text"
       placeholder="https://tailwind-starter-kit.vercel.app/docs/forms"
     />
     <div
       class="absolute inset-y-0 left-0 flex items-center px-2 pointer-events-none"
     >
-      <Icon type="email" svgClass="h-4 w-4"></Icon>
+      <Icon
+        type="{{ iconEnum.EMAIL }}"
+        svgClass="h-6 w-6 animate-bounce"
+      ></Icon>
     </div>
   </div>
   <Divider></Divider>
   <Container className="">
     <Icon type="{{ type }}"></Icon>
-    <Icon type="bell" [isFill]="true"></Icon>
-    <Icon type="bell"></Icon>
+    <Icon type="{{ iconEnum.BELL }}" [isFill]="true"></Icon>
+    <Icon type="{{ iconEnum.BELL }}"></Icon>
   </Container>
   <Divider></Divider>
   <Container className="flex">
-    <Icon type="email" svgClass="h-10 w-10"></Icon>
-    <Icon type="email" svgClass="h-12 w-12" [isFill]="true"></Icon>
+    <Icon type="{{ iconEnum.EMAIL }}" svgClass="h-10 w-10"></Icon>
+    <Icon
+      type="{{ iconEnum.EMAIL }}"
+      svgClass="h-12 w-12"
+      [isFill]="true"
+    ></Icon>
   </Container>
   <!-- <div>
   </div> -->
   <!-- ! END HERE ICON -->
+  <!-- ! START HERE BADGE -->
+  <div>
+    <span class="badge">badge</span>
+    <span class="badge-primary">badge-primary</span>
+    <span class="badge-secondary">badge-secondary</span>
+    <span class="badge-disabled">badge-disabled</span>
+    <span class="badge-error">badge-error</span>
+  </div>
+  <Divider></Divider>
+  <div>
+    <span class="badge animate-ping">+1</span>
+    <span class="badge-primary animate-pulse">+12</span>
+    <span class="badge-secondary animate-bounce">New</span>
+    <span class="badge-disabled animate-spin">Waiting...</span>
+    <span class="badge-error animate-ping">Error</span>
+  </div>
+  <!-- ! END HERE BADGE -->
 </Container>

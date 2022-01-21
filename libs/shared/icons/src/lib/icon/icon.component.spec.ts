@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { IconEnum } from '@bizawaynx/shared/util';
 
 import { IconComponent } from './icon.component';
 
@@ -19,6 +20,7 @@ describe('IconComponent', () => {
   });
 
   it('should create', () => {
+    component.type = IconEnum.ADD;
     expect(component).toBeTruthy();
   });
 });
