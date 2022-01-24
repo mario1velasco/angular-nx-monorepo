@@ -28,7 +28,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: 'platform',
+    uniqueName: 'navbar',
     publicPath: 'auto',
   },
   optimization: {
@@ -44,8 +44,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      remotes: {
-        navbar: 'http://localhost:4201/remoteEntry.js',
+      name: 'navbar',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './Module': 'apps/navbar/src/app/remote-entry/entry.module.ts',
       },
       shared: share({
         '@angular/core': {
