@@ -8,6 +8,9 @@
     "start": "nx serve",
     "dev": "nx serve",
     "angularnx": "nx serve angularnx",
+    "platform": "nx serve platform",
+    "navbar": "nx serve navbar",
+    "all": "nx run-many --target=serve --all",
     "build": "nx build",
     "test": "nx test",
     "e2e": "nx e2e angularnx-e2e --watch",
@@ -15,6 +18,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-architects/module-federation": "^13.0.1",
     "@angular/animations": "~13.1.0",
     "@angular/common": "~13.1.0",
     "@angular/compiler": "~13.1.0",
