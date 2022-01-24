@@ -44,6 +44,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
+      // ! We configured the remote
       name: 'navbar',
       filename: 'remoteEntry.js',
       exposes: {

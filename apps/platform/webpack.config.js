@@ -44,8 +44,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
+      // ! We add here the REMOTES
       remotes: {
         navbar: 'http://localhost:4201/remoteEntry.js',
+        menu: 'http://localhost:4202/remoteEntry.js',
       },
       shared: share({
         '@angular/core': {
