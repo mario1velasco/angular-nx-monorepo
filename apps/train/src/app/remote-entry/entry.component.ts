@@ -2,9 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'bizawaynx-train-entry',
-  template: `<div class="remote-entry">
-    <h2>train's Remote Entry Component</h2>
-  </div>`,
+  template: `<h2>Train Vertical</h2>
+    <ul>
+      <li><a routerLink="booking">Booking</a></li>
+      <li><a routerLink="search">Search</a></li>
+    </ul>
+    <router-outlet></router-outlet>`,
   styles: [
     `
       .remote-entry {
