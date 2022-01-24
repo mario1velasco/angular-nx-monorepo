@@ -16,6 +16,11 @@ import { RouterModule } from '@angular/router';
           loadChildren: () =>
             import('hotel/Module').then((m) => m.RemoteEntryModule),
         },
+        {
+          path: 'train',
+          loadChildren: () =>
+            import('train/Module').then((m) => m.RemoteEntryModule),
+        },
       ],
       { initialNavigation: 'enabledBlocking' }
     ),

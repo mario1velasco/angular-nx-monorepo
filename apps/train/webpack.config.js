@@ -28,7 +28,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: 'platform',
+    uniqueName: 'train',
     publicPath: 'auto',
   },
   optimization: {
@@ -44,9 +44,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      remotes: {
-        hotel: 'http://localhost:4201/remoteEntry.js',
-        train: 'http://localhost:4202/remoteEntry.js',
+      name: 'train',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './Module': 'apps/train/src/app/remote-entry/entry.module.ts',
       },
       shared: share({
         '@angular/core': {
