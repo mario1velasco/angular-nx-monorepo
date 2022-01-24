@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { SharedIconsModule } from '@bizawaynx/shared/icons';
 import { SharedUiModule } from '@bizawaynx/shared/ui';
-import { SharedUtilModule } from '../../../../libs/shared/util/src';
+import { SharedUtilModule } from '@bizawaynx/shared/util';
 
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
