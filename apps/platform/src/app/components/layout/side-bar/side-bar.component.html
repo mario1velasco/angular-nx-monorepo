@@ -1,0 +1,174 @@
+<div
+  *ngIf="isMenu === 'true'"
+  id="mobile-nav"
+  class="w-full xl:hidden h-full absolute z-40"
+>
+  <div
+    class="bg-gray-800 opacity-50 inset-0 fixed w-full h-full"
+    (click)="clickMenu('false')"
+  ></div>
+  <div
+    class="w-64 z-20 absolute left-0 z-40 top-0 bg-white shadow flex-col justify-between transition duration-150 ease-in-out h-full"
+  >
+    <div class="flex flex-col justify-between h-full">
+      <div class="px-6 pt-4 overflow-y-auto">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <Icon type="{{ iconEnum.LOGO }}"></Icon>
+            <p class="text-bold md:text2xl text-base pl-3 text-gray-800">
+              Bizaway
+            </p>
+          </div>
+          <div
+            id="cross"
+            class="text-gray-800 hover:text-indigo-500 cursor-pointer"
+            (click)="clickMenu('false')"
+          >
+            <Icon type="{{ iconEnum.CROSS }}"></Icon>
+          </div>
+        </div>
+        <ul class="f-m-m">
+          <a>
+            <li class="pt-8">
+              <div
+                class="flex items-center cursor-pointer text-gray-800 hover:text-indigo-500"
+              >
+                <Icon
+                  type="{{ iconEnum.DASHBOARD }}"
+                  svgClass="md:w-6 md:h-6 w-5 h-5"
+                ></Icon>
+                <p class="ml-3 text-lg"><a routerLink="">Dashboard</a></p>
+              </div>
+            </li>
+          </a>
+          <a>
+            <li class="pt-8">
+              <div
+                class="flex items-center text-gray-800 hover:text-indigo-500"
+              >
+                <Icon
+                  type="{{ iconEnum.HOTEL }}"
+                  svgClass="md:w-6 md:h-6 w-5 h-5"
+                ></Icon>
+
+                <p class="ml-3 text-lg">Hotel</p>
+                <div class="cursor-pointer">
+                  <div
+                    id="chevronup"
+                    (click)="setIsList(2)"
+                    [ngClass]="isList === 2 ? 'hidden' : 'ml-4'"
+                  >
+                    <Icon type="{{ iconEnum.CHEVRON_DOWN }}"></Icon>
+                  </div>
+                  <div
+                    *ngIf="isList === 2"
+                    id="chevrondown"
+                    (click)="setIsList(0)"
+                    class="ml-4"
+                  >
+                    <Icon type="{{ iconEnum.CHEVRON_UP }}"></Icon>
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="isList === 2" id="list">
+                <ul class="my-3">
+                  <li
+                    class="text-sm text-gray-800 hover:text-indigo-500 py-2 px-6 cursor-pointer"
+                  >
+                    <a routerLink="hotel/booking">Bookings</a>
+                  </li>
+                  <li
+                    class="text-sm text-gray-800 hover:text-indigo-500 py-2 px-6 cursor-pointer"
+                  >
+                    <a routerLink="hotel/search">Search</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </a>
+          <a>
+            <li class="pt-8">
+              <div
+                class="flex items-center text-gray-800 hover:text-indigo-500"
+              >
+                <Icon
+                  type="{{ iconEnum.TRAIN }}"
+                  svgClass="md:w-6 md:h-6 w-5 h-5"
+                ></Icon>
+                <p class="ml-3 text-lg">Train</p>
+                <div class="cursor-pointer">
+                  <div
+                    id="chevronup2"
+                    (click)="setIsList(3)"
+                    [ngClass]="isList === 3 ? 'hidden' : 'ml-4'"
+                  >
+                    <Icon type="{{ iconEnum.CHEVRON_DOWN }}"></Icon>
+                  </div>
+                  <div
+                    *ngIf="isList === 3"
+                    id="chevrondown2"
+                    (click)="setIsList(0)"
+                    class="ml-4"
+                  >
+                    <Icon type="{{ iconEnum.CHEVRON_UP }}"></Icon>
+                  </div>
+                </div>
+              </div>
+              <div id="list2" *ngIf="isList === 3">
+                <ul class="my-3">
+                  <li
+                    class="text-sm py-2 px-6 cursor-pointer text-gray-800 hover:text-indigo-500"
+                  >
+                    <a routerLink="train/booking">Bookings</a>
+                  </li>
+                  <li
+                    class="text-sm py-2 px-6 cursor-pointer text-gray-800 hover:text-indigo-500"
+                  >
+                    <a routerLink="train/search">Search</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </a>
+        </ul>
+      </div>
+      <div class="w-full">
+        <div class="flex justify-center mb-4 w-full px-6">
+          <div class="relative w-full">
+            <div class="text-gray-500 absolute ml-4 inset-0 m-auto w-4 h-4">
+              <Icon type="{{ iconEnum.SEARCH }}" svgClass="h-4 w-4"></Icon>
+            </div>
+            <input
+              class="bg-gray-100 focus:outline-none rounded w-full text-sm text-gray-500 bg-gray-100 pl-10 py-2"
+              type="text"
+              placeholder="Search"
+            />
+          </div>
+        </div>
+        <div class="border-t border-gray-300">
+          <div class="w-full flex items-center justify-between px-6 pt-1">
+            <div class="flex items-center">
+              <img
+                alt="profile-pic"
+                src="https://tuk-cdn.s3.amazonaws.com/assets/components/boxed_layout/bl_1.png"
+                class="w-8 h-8 rounded-md"
+              />
+              <p class="text-gray-800 text-base leading-4 ml-2">Jane Doe</p>
+            </div>
+            <ul class="flex">
+              <li class="cursor-pointer pt-4 pb-4">
+                <Icon
+                  type="{{ iconEnum.CHEVRON_RIGHT }}"
+                  svgClass="h-5 w-5"
+                ></Icon>
+              </li>
+              <li class="cursor-pointer pt-4 pb-4 pl-3">
+                <Icon type="{{ iconEnum.BELL }}" svgClass="h-5 w-5"></Icon>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

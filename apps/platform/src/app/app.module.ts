@@ -2,16 +2,23 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
 import { LayoutComponent } from './components/layout/layout.component';
 import { SharedIconsModule } from '@bizawaynx/shared/icons';
 import { SharedUtilModule } from '@bizawaynx/shared/util';
 import { SharedUiModule } from '@bizawaynx/shared/ui';
 import { SideBarComponent } from './components/layout/side-bar/side-bar.component';
+import { NavBarComponent } from './components/layout/nav-bar/nav-bar.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent, LayoutComponent, SideBarComponent],
+  declarations: [
+    AppComponent,
+    LayoutComponent,
+    SideBarComponent,
+    NavBarComponent,
+    DashboardComponent,
+  ],
   imports: [
     BrowserModule,
     SharedIconsModule,
@@ -19,6 +26,10 @@ import { SideBarComponent } from './components/layout/side-bar/side-bar.componen
     SharedUiModule,
     RouterModule.forRoot(
       [
+        {
+          path: '',
+          component: DashboardComponent,
+        },
         {
           path: 'hotel',
           loadChildren: () =>
