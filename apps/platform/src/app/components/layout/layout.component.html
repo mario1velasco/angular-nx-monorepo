@@ -1,0 +1,16 @@
+<!-- Navigation starts -->
+<!-- SideBar starts -->
+<bizawaynx-side-bar [(isMenu)]="isMenu"></bizawaynx-side-bar>
+<!-- SideBar ends -->
+<!-- Navigation starts -->
+<bizawaynx-nav-bar [(isMenu)]="isMenu"></bizawaynx-nav-bar>
+<!-- Navigation ends -->
+<!-- Remove class [ h-64 ] when adding a card block -->
+<div class="container mx-auto px-6 mt-10">
+  <!-- Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border -->
+  <div class="w-full h-full rounded border-dashed border-2 border-gray-300">
+    <!-- Place your content here -->
+    <ng-content></ng-content>
+  </div>
+</div>
+<!-- Navigation ends -->

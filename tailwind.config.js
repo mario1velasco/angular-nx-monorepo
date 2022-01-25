@@ -5,6 +5,9 @@ module.exports = {
   // mode: 'jit',
   content: [
     './apps/angularnx/src/**/*.{html,js}',
+    './apps/platform/src/**/*.{html,js}',
+    './apps/hotel/src/**/*.{html,js}',
+    './apps/train/src/**/*.{html,js}',
     './libs/shared/ui/src/**/*.{html,js}',
     './libs/shared/icons/src/**/*.{html,js}',
     './libs/shared/util/src/**/*.{html,js}',
