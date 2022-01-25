@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "emitDecoratorMetadata": true
+  },
+  "exclude": ["../src/test.ts", "../**/*.spec.ts"],
+  "include": [
+    "../src/**/*",
+    "/Users/mariovelascoalonso/Info/nx/bizawaynx/apps/angularnx/src/polyfills.ts"
+  ]
+}
