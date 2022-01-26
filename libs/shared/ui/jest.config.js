@@ -11,6 +11,7 @@ module.exports = {
   coverageDirectory: '../../../coverage/libs/shared/ui',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
+    '^.+\\.stories\\.[jt]sx?$': '@storybook/addon-storyshots/injectFileName',
   },
   transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$)'],
   snapshotSerializers: [
@@ -19,3 +20,15 @@ module.exports = {
     'jest-preset-angular/build/serializers/html-comment',
   ],
 };
+
+// module.exports = {
+//   globals: {
+//     __TRANSFORM_HTML__: true,
+//   },
+//   transform: {
+//     '^.+\\.jsx?$': 'babel-jest',
+//     '^.+\\.(ts|html)$':
+//       '<rootDir>/node_modules/jest-preset-angular/preprocessor.js',
+//   },
+//   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node', '.html'],
+// };

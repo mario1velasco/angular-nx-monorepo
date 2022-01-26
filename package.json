@@ -10,6 +10,7 @@
     "angularnx": "nx serve angularnx",
     "platform": "npx nx run platform:serve-mfe",
     "storybook": "nx run shared-ui:storybook",
+    "storybooktest": "nx test shared-ui",
     "build": "nx build",
     "test": "nx test",
     "e2e": "nx e2e angularnx-e2e --watch",
