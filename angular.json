@@ -54,6 +54,9 @@
               "sourceMap": true,
               "namedChunks": true
             }
+            // "storybook": {
+            //   "watch": true
+            // }
           },
           "defaultConfiguration": "production"
         },
@@ -449,6 +452,7 @@
             "config": {
               "configFolder": "libs/shared/ui/.storybook"
             }
+            // "projectBuildConfig": "shared-ui:build-storybook"
           },
           "configurations": {
             "ci": {
