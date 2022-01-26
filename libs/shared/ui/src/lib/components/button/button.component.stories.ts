@@ -1,4 +1,5 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
+import { SharedIconsModule } from '@bizawaynx/shared/icons';
 import { ButtonComponent } from './button.component';
 
 export default {
@@ -6,7 +7,7 @@ export default {
   component: ButtonComponent,
   decorators: [
     moduleMetadata({
-      imports: [],
+      imports: [SharedIconsModule],
     }),
   ],
 } as Meta<ButtonComponent>;
@@ -19,4 +20,5 @@ const Template: Story<ButtonComponent> = (args: ButtonComponent) => ({
 export const Primary = Template.bind({});
 Primary.args = {
   className: 'btn',
+  disabled: true,
 };

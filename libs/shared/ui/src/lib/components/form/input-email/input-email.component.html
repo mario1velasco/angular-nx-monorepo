@@ -1,8 +1,8 @@
-<Container class="{{ containerClass }}">
+<Container class="{{ inputEmail.containerClass }}">
   <label
-    for="{{ id }}"
+    for="{{ inputEmail.id }}"
     class="text-gray-800 text-left text-sm font-bold leading-tight tracking-normal mb-2"
-    >{{ labelText }}</label
+    >{{ inputEmail.labelText }}</label
   >
   <div class="relative">
     <div
@@ -11,11 +11,11 @@
       <Icon type="{{ iconEnum.EMAIL }}" svgClass="h-6 w-6"></Icon>
     </div>
     <input
-      [id]="id"
-      [name]="id"
+      [id]="inputEmail.id"
+      [name]="inputEmail.id"
       class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 bg-white font-normal w-64 h-10 flex items-center pl-16 text-sm border-gray-300 rounded border shadow"
-      [placeholder]="placeholder"
-      [(ngModel)]="value"
+      [placeholder]="inputEmail.placeholder"
+      [(ngModel)]="inputEmail.value"
       (ngModelChange)="onInputChange($event)"
       #emailInput
     />
