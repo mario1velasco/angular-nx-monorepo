@@ -54,9 +54,6 @@
               "sourceMap": true,
               "namedChunks": true
             }
-            // "storybook": {
-            //   "watch": true
-            // }
           },
           "defaultConfiguration": "production"
         },
