@@ -15,7 +15,8 @@
       [name]="inputEmail.id"
       class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 bg-white font-normal w-64 h-10 flex items-center pl-16 text-sm border-gray-300 rounded border shadow"
       [placeholder]="inputEmail.placeholder"
-      [(ngModel)]="inputEmail.value"
+      [value]="inputEmail.value"
+      type="text"
       (ngModelChange)="onInputChange($event)"
       #emailInput
     />
