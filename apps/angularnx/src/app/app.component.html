@@ -18,10 +18,8 @@
     <Container className="col-start-2 col-span-3">
       <h2 class="ml-2">Bundi Bundi</h2>
       <Input-email
-        id="input-email-1"
-        placeholder="Custom placeholder"
-        labelText="My custom label text"
-        [(value)]="emailValue"
+        [inputEmail]="inputEmail2"
+        (valueChange)="valueChange($event)"
       ></Input-email>
     </Container>
     <Container
@@ -38,12 +36,10 @@
     </Container>
   </div>
   <div class="divider"></div>
-  <Input-email
-    id="input-email-1"
-    placeholder="Custom placeholder"
-    labelText="My label text"
-    [(value)]="emailValue"
-  ></Input-email>
+  <!-- <Input-email
+    [inputEmail]="inputEmail1"
+    (valueChange)="valueChange($event)"
+  ></Input-email> -->
   <div class="divider"></div>
 
   <!-- ! INI CONTAINER ICON -->

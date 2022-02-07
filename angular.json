@@ -448,7 +448,8 @@
             "port": 4400,
             "config": {
               "configFolder": "libs/shared/ui/.storybook"
-            }
+            },
+            "projectBuildConfig": "shared-ui:build-storybook"
           },
           "configurations": {
             "ci": {
@@ -464,7 +465,9 @@
             "outputPath": "dist/storybook/shared-ui",
             "config": {
               "configFolder": "libs/shared/ui/.storybook"
-            }
+            },
+            "styles": ["libs/shared/ui/.storybook/styles.css"],
+            "projectBuildConfig": "shared-ui:build-storybook"
           },
           "configurations": {
             "ci": {
