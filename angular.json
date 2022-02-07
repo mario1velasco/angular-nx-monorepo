@@ -466,6 +466,7 @@
             "config": {
               "configFolder": "libs/shared/ui/.storybook"
             },
+            "styles": ["libs/shared/ui/.storybook/styles.css"],
             "projectBuildConfig": "shared-ui:build-storybook"
           },
           "configurations": {
