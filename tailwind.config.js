@@ -11,6 +11,7 @@ module.exports = {
     './libs/shared/ui/src/**/*.{html,js}',
     './libs/shared/icons/src/**/*.{html,js}',
     './libs/shared/util/src/**/*.{html,js}',
+    './libs/shared/storyfirst/src/**/*.{html,js}',
   ],
 
   // purge: {
