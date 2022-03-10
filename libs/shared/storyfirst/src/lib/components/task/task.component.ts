@@ -4,11 +4,8 @@ import { Task } from '../../../model/task.model';
 
 @Component({
   selector: 'bizawaynx-task',
-  template: `
-    <div class="list-item">
-      <input type="text" [value]="title" readonly="true" />
-    </div>
-  `,
+  templateUrl: './task.component.html',
+  styleUrls: ['./task.component.scss'],
 })
 export class TaskComponent {
   @Input()
@@ -24,4 +21,19 @@ export class TaskComponent {
   // tslint:disable-next-line: no-output-on-prefix
   @Output()
   onArchiveTask = new EventEmitter<Event>();
+
+  /**
+   * Component method to trigger the onPin event
+   * @param id string
+   */
+  onPin(id: any) {
+    this.onPinTask.emit(id);
+  }
+  /**
+   * Component method to trigger the onArchive event
+   * @param id string
+   */
+  onArchive(id: any) {
+    this.onArchiveTask.emit(id);
+  }
 }

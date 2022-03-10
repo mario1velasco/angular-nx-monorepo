@@ -22,7 +22,6 @@ export const actionsData = {
 };
 
 const Template: Story<TaskComponent> = (args: TaskComponent) => ({
-  // props: args,
   component: TaskComponent,
   props: {
     ...args,
@@ -34,28 +33,28 @@ const Template: Story<TaskComponent> = (args: TaskComponent) => ({
 export const Default = Template.bind({});
 Default.args = {
   title: 'Default',
-  // task: {
-  //   id: '1',
-  //   title: 'Test Task',
-  //   state: 'TASK_INBOX',
-  //   updatedAt: new Date(2021, 0, 1, 9, 0),
-  // },
+  task: {
+    id: '1',
+    title: 'Test Task',
+    state: 'TASK_INBOX',
+    updatedAt: new Date(2021, 0, 1, 9, 0),
+  },
 };
 
 export const Pinned = Template.bind({});
 Pinned.args = {
   title: 'Pinned',
-  // task: {
-  //   ...Default.args.task,
-  //   state: 'TASK_PINNED',
-  // } as Task,
+  task: {
+    ...Default.args.task,
+    state: 'TASK_PINNED',
+  } as Task,
 };
 
 export const Archived = Template.bind({});
 Archived.args = {
   title: 'Archived',
-  // task: {
-  //   ...Default.args.task,
-  //   state: 'TASK_ARCHIVED',
-  // } as Task,
+  task: {
+    ...Default.args.task,
+    state: 'TASK_ARCHIVED',
+  } as Task,
 };

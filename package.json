@@ -11,7 +11,7 @@
     "platform": "npx nx run platform:serve-mfe",
     "storybook": "npx nx run shared-storyfirst:storybook",
     "storybook:jest": "nx test shared-storyfirst --test-file storybook.test.js",
-    "storybook:e2e": "nx run shared-storyfirst-e2e:e2e",
+    "storybook:e2e": "nx run shared-storyfirst-e2e:e2e --headed --watch ",
     "build": "nx build",
     "test": "nx test",
     "e2e": "nx e2e angularnx-e2e --watch",
