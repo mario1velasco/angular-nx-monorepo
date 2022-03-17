@@ -14,11 +14,9 @@ export class TaskComponent {
   @Input()
   title!: string;
 
-  // tslint:disable-next-line: no-output-on-prefix
   @Output()
   onPinTask = new EventEmitter<Event>();
 
-  // tslint:disable-next-line: no-output-on-prefix
   @Output()
   onArchiveTask = new EventEmitter<Event>();
 
