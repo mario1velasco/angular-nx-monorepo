@@ -16,6 +16,7 @@ import { DividerComponent } from './components/divider/divider.component';
     FormsModule,
     BrowserModule,
     SharedUtilModule,
+    SharedIconsModule,
   ],
   declarations: [
     ButtonComponent,

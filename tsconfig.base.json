@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@bizawaynx/shared/icons": ["libs/shared/icons/src/index.ts"],
+      "@bizawaynx/shared/storyfirst": ["libs/shared/storyfirst/src/index.ts"],
       "@bizawaynx/shared/ui": ["libs/shared/ui/src/index.ts"],
       "@bizawaynx/shared/util": ["libs/shared/util/src/index.ts"]
     }
